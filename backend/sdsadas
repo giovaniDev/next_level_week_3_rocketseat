@@ -1,0 +1,9 @@
+{
+	"name": "Lar",
+	"latitude": 2123,
+	"longitude": 1233,
+	"about": "Sobre",
+	"instructions": "instrucoes",
+	"opening_hours": "",
+	"open_on_weekend": true
+}
