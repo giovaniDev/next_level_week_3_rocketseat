@@ -2,14 +2,18 @@ import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Landing from './pages/Landing';
-import Orfanates from './pages/Orfanates';
+import OrphanagesMap from './pages/OrphanagesMap';
+import Orphanage from './pages/Orphanage';
+import CreateOrphanage from './pages/CreateOrphanage';
 
 function Routes() {
     return (
         <BrowserRouter>
             <Switch>
                 <Route path='/' exact component={Landing} />
-                <Route path='/app' component={Orfanates} />
+                <Route path='/app' component={OrphanagesMap} />
+                <Route path='/orphanages/create' exact component={CreateOrphanage} />
+                <Route path='/orphanages/:id' component={Orphanage} />
             </Switch>
         </BrowserRouter>
     )
