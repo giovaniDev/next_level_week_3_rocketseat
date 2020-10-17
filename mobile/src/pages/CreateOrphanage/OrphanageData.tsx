@@ -43,14 +43,17 @@ export default function OrphanageData() {
       data.append('images', {
         name: `image_${index}.jpg`,
         type: 'image/jpg',
-        url: image
+        uri: image
        } as any )
     })
+
+    console.log(images)
 
     await api.post('orphanages', data);
 
     navigation.navigate('OrphanagesMap')
   }
+
 
   async function handleSelectedImages() {
     const { status } = await ImagePicker.requestCameraRollPermissionsAsync();
